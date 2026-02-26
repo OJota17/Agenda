@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('phttps://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swa');
+
+@layer base {
+  :root {
+    --background: 180 10% 97%;
+    --foreground: 210 20% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 12%;
+
+    --primary: 174 62% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 8% 92%;
+    --secondary-foreground: 210 20% 12%;
+
+    --muted: 180 8% 94%;
+    --muted-foreground: 210 10% 46%;
+
+    --accent: 174 50% 93%;
+    --accent-foreground: 174 62% 28%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 60% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 210 14% 89%;
+    --input: 210 14% 89%;
+    --ring: 174 62% 38%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 174 62% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 174 50% 93%;
+    --sidebar-accent-foreground: 174 62% 28%;
+    --sidebar-border: 210 14% 89%;
+    --sidebar-ring: 174 62% 38%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(172, 43%, 45%), hsl(174, 72%, 48%));
+    --shadow-card: 0 1px 3px 0 hsl(210 14% 89% / 0.5), 0 1px 2px -1px hsl(210 14% 89% / 0.5);
+    --shadow-elevated: 0 10px 25px -5px hsl(210 20% 12% / 0.08), 0 8px 10px -6px hsl(210 20% 12% / 0.04);
+  }
+
+  .dark {
+    --background: 210 20% 8%;
+    --foreground: 180 10% 95%;
+
+    --card: 210 18% 12%;
+    --card-foreground: 180 10% 95%;
+
+    --popover: 210 18% 12%;
+    --popover-foreground: 180 10% 95%;
+
+    --primary: 174 62% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 14% 18%;
+    --secondary-foreground: 180 10% 95%;
+
+    --muted: 210 14% 18%;
+    --muted-foreground: 210 10% 60%;
+
+    --accent: 174 40% 18%;
+    --accent-foreground: 174 62% 60%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 14% 20%;
+    --input: 210 14% 20%;
+    --ring: 174 62% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 shadow-sm;
+  }
+}
